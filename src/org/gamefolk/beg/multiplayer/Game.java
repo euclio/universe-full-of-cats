@@ -106,7 +106,7 @@ public class Game extends GameView
 		
 		Bitmap tempBg = BitmapFactory.decodeResource(MultiplayerActivity.res, R.drawable.bg_small);
 		Bitmap scaledTempBg = tempBg.createScaledBitmap(tempBg, 1920, 1080, false);
-		background = new Sprite (tempBg, 0, 0);
+		background = new Sprite (scaledTempBg, 0, 0);
 	}
 
 	public boolean onTouchEvent(MotionEvent event)

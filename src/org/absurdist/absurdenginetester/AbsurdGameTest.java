@@ -1,9 +1,12 @@
 package org.absurdist.absurdenginetester;
 
+import javax.net.ssl.ManagerFactoryParameters;
+
 import org.absurdist.absurdengine.GameActivity;
 import org.absurdist.absurdengine.GameView;
 
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,6 +18,13 @@ import android.view.WindowManager;
 
 public class AbsurdGameTest extends GameActivity
 {
+	private BluetoothManager manager;
+	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig){
+		super.onConfigurationChanged(newConfig);
+	}
+	
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -23,7 +33,15 @@ public class AbsurdGameTest extends GameActivity
         
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         
+        manager = new BluetoothManager(this);
+        
         super.onCreate(savedInstanceState); 
+    }
+    
+    @Override
+    public void onDestroy() {
+    	super.onDestroy();
+    	manager.destroyReceiver();
     }
     
     @Override
@@ -36,6 +54,7 @@ public class AbsurdGameTest extends GameActivity
     public void onResume()
     {
         super.onResume();
+
     }
 
     protected GameView initializeGame()

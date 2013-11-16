@@ -6,3 +6,4 @@ lint.xml
 project.properties
 .settings/
 .DS_Store
+.classpath

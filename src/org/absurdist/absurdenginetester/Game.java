@@ -2,6 +2,7 @@ package org.absurdist.absurdenginetester;
 
 import org.absurdist.absurdengine.GameView;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;

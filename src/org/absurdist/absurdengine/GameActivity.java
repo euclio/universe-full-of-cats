@@ -1,7 +1,6 @@
 package org.absurdist.absurdengine;
 
 import android.app.Activity;
-import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,7 +17,6 @@ public abstract class GameActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         // provide static access to the program's resources
         res = getResources();
         

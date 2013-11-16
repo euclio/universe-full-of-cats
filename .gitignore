@@ -7,3 +7,4 @@ project.properties
 .settings/
 .DS_Store
 .classpath
+*.swp

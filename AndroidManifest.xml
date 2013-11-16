@@ -3,17 +3,21 @@
      package="org.gamefolk.beg">
      
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="10"
         android:targetSdkVersion="15" />
+        
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     
     <application>
-         <activity android:name="org.gamefolk.beg.multiplayer.AbsurdGameTest" android:label="AbsurdEngine">
+         <activity android:name="org.gamefolk.beg.multiplayer.AbsurdGameTest" android:label="AbsurdEngine" android:configChanges="keyboardHidden|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>
+    
 </manifest>
 
 

@@ -1,4 +1,4 @@
-package org.gamefolk.beg.multiplayer;
+package org.absurdist.absurdenginetester;
 
 import org.absurdist.absurdengine.GameActivity;
 import org.absurdist.absurdengine.GameView;

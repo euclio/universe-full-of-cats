@@ -1,3 +1,8 @@
 bin/
+gen/
+libs/
+.project
+lint.xml
+project.properties
 .settings/
 .DS_Store

@@ -5,6 +5,8 @@ import org.absurdist.absurdengine.GameView;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -13,7 +15,7 @@ import android.view.WindowManager;
  * @author sam
  */
 
-public class AbsurdGameTest extends GameActivity
+public class MultiplayerActivity extends GameActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -22,6 +24,14 @@ public class AbsurdGameTest extends GameActivity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density  = getResources().getDisplayMetrics().density;
+        screenHeightDpi = outMetrics.heightPixels / density;
+        screenWidthDpi = outMetrics.widthPixels / density;
         
         super.onCreate(savedInstanceState); 
     }
@@ -44,5 +54,7 @@ public class AbsurdGameTest extends GameActivity
         return world;
     }
     
+    static float screenHeightDpi;
+    static float screenWidthDpi;
     private Game world;
 }

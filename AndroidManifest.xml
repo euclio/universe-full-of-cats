@@ -7,7 +7,7 @@
         android:targetSdkVersion="15" />
     
     <application>
-         <activity android:name="org.gamefolk.beg.multiplayer.AbsurdGameTest" android:label="AbsurdEngine">
+         <activity android:name="org.gamefolk.beg.multiplayer.MultiplayerActivity" android:label="AbsurdEngine">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
